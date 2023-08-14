@@ -1,0 +1,311 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons+Outlined" rel="stylesheet">
+    <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.15.3/css/all.css">
+    <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@200&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="wrapper">
+        <div class="icon">
+            <span class="material-icons-outlined" style="font-size: 30px;">
+            <span class="material-icons-outlined" style="color: #E0C9FF;">add</span>
+            </span>
+        </div>
+        <div class="dots">
+            <span class="custom-dot clickable-dot"></span>
+            <span class="dot clickable-dot"></span>
+            <span class="dot clickable-dot"></span>
+        </div>        
+        <div class="toggle">
+            <span class="toggle-value">°C</span>
+            <span class="material-icons-outlined toggle-switch" id="toggle-icon" style="font-size: 36px;">toggle_on</span>
+            <span class="toggle-value">°F</span>
+        </div>
+        <div class="section1">
+            <i class="fa fa-paper-plane" aria-hidden="true"></i>
+            <span class="location">New York, USA</span>
+            <span class="time"><i class="fas fa-sunrise"></i>07:19</span>
+        </div>
+        <div class="section2">
+            <span class="today">Today 28 Sept</span>
+            <span class="time"><i class="fas fa-sunset"></i>19:32</span>
+        </div>
+        <div class="section3">
+            <span class="material-icons-outlined chevron-icon" style="margin-right: 110px;">chevron_left</span>
+            <span class="temperature">27°</span>
+            <span class="material-icons-outlined chevron-icon" style="margin-left: 100px;">chevron_right</span>
+        </div>
+        <div class="section4">
+            <i class="material-icons-outlined">light_mode</i>
+            <span>Sunny</span>
+        </div>
+        <img src="E:\IIT Madras\assets\weather.png" alt="weather" class="image">
+        <div class="card text-center mainCard">
+            <div class="card-body" style="margin-left: 30px;">
+                <h3 class="card-title">Welcome back Jisoo!</h3>
+                <p class="card-text" style="font-family: 'Nunito', sans-serif;">Check out today's weather information</p>
+                <div class="profile">
+                    <span class="material-icons-outlined more-icon" style="margin: 0 18px 18px 0;">more_horiz</span>
+                    <div class="image-with-border">
+                        <img src="E:\IIT Madras\assets\jisoo.avif" alt="image">
+                    </div>
+                </div>
+                <div class="graphCard">
+                    <div class="card text-center">
+                        <div class="card-body">
+                            <h4 class="graphCard-title">Upcoming hours</h4>
+                        </div>
+                        <div class="graphCard-buttons">
+                            <button class="graphCard-button" style="color: #A9A9A9; font-family: 'Nunito', sans-serif;">Rain precipitation <span class="material-icons-outlined">expand_more</span></button>
+                            <button class="graphCard-button" style="font-family: 'Nunito', sans-serif;">Next days <span class="material-icons-outlined">chevron_right</span></button>
+                        </div>  
+                    </div>
+                    <div class="title-overlay"></div>
+                    <div class="y-axis-overlay"></div>
+                    <div class="time-row">
+                        <div class="time-column">
+                            <div class="time-card">
+                                <p class="time-label">Now</p>
+                                <span class="material-icons-outlined" style="color: #e1a897;">light_mode</span>
+                                <h1>27°</h1>
+                            </div>
+                        </div>
+                        <div class="time-column">
+                            <div class="time-card">
+                                <p class="time-label">11:00</p>
+                                <span class="material-icons-outlined" style="color: #e1a897;">light_mode</span>
+                                <h1>28°</h1>
+                            </div>
+                        </div>
+                        <div class="time-column">
+                            <div class="time-card">
+                                <p class="time-label">12:00</p>
+                                <span class="material-icons-outlined" style="color: #e1a897;">cloud</span>
+                                <h1>28°</h1>
+                            </div>
+                        </div>
+                        <div class="time-column">
+                            <div class="time-card">
+                                <p class="time-label">13:00</p>
+                                <span class="material-icons-outlined" style="color: #e1a897;">cloud</span>
+                                <h1 style="z-index: 3;">29°</h1>
+                            </div>
+                        </div>
+                        <div class="time-column">
+                            <div class="time-card">
+                                <p class="time-label">14:00</p>
+                                <span class="material-icons-outlined" style="color: #e1a897;">light_mode</span>
+                                <h1>30°</h1>
+                            </div>
+                        </div>
+                        <div class="time-column">
+                            <div class="time-card">
+                                <p class="time-label">15:00</p>
+                                <span class="material-icons-outlined" style="color: #e1a897;">cloud</span>
+                                <h1>29°</h1>
+                            </div>
+                        </div>
+                        <div class="time-column">
+                            <div class="time-card">
+                                <p class="time-label">16:00</p>
+                                <span class="material-icons-outlined" style="color: #e1a897;">cloud</span>
+                                <h1>29°</h1>
+                            </div>
+                        </div>
+                        <div class="time-column">
+                            <div class="time-card">
+                                <p class="time-label">17:00</p>
+                                <span class="material-icons-outlined" style="color: #e1a897;">light_mode</span>
+                                <h1>28°</h1>
+                            </div>
+                        </div>
+                    </div>
+                    <canvas id="myChart" class="y-axis-hidden" style="width:100%; max-width:900px; margin: 50px 0 0 30px;"></canvas>
+                    <p class="card-text" style="margin: 40px 0 10px 0; font-family: 'Nunito', sans-serif;"><b>More details of today's weather</b></p>
+                    <div class="row">
+                        <div class="column">
+                            <div class="subCard">
+                                <div style="display: flex;">
+                                    <h3 style="margin: 0 0 0 15px; font-family: 'Nunito', sans-serif;">Humidity</h3>
+                                    <i class="fas fa-humidity fa-lg" style="margin: 9px 0 0 120px;"></i>
+                                </div>
+                                <p style="position: relative; bottom: 12px;"><b style="font-size: larger;">82%</b> bad</p>
+                                <div class="level" style="text-align: center;">
+                                    <span class="custom-dot" style="width: 60px; background-color: #e1a897; position: relative; bottom: 5px;"><p style="position: relative; bottom: 35px;">good</p></span>
+                                    <span class="custom-dot" style="width: 60px; background-color: #e1a897; position: relative; bottom: 5px;"><p style="position: relative; bottom: 35px;">normal</p></span>
+                                    <span class="custom-dot-container" style="display: inline-block; position: relative;">
+                                        <span class="custom-dot-left" style="width: 18%; background-color: #e1a897;"></span><p style="position: relative; bottom: 39px;">bad</p>
+                                        <span class="custom-dot-right" style="width: 82%; background-color: #E3E4E4;"></span>
+                                    </span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="column">
+                            <div class="subCard">
+                                <div style="display: flex;">
+                                    <h3 style="margin: 0 0 0 15px; font-family: 'Nunito', sans-serif;">Wind</h3>
+                                    <span class="material-icons-outlined" style="margin: 9px 0 0 150px; color: #e1a897;">air</span>
+                                    <span class="material-icons-outlined" style="margin: 9px 0 0 150px; color: #e1a897; position: relative; top: 46px; right: 280px;">north_west</span>
+                                </div>
+                                <div class="progress">
+                                    <div class="barOverflow">
+                                      <div class="bar"></div>
+                                    </div>
+                                    <span style="position: relative; top: 5px;">8 km/h</span>
+                                </div>                                                               
+                            </div>                            
+                        </div>
+                        <div class="column">
+                            <div class="subCard">
+                                <div style="display: flex;">
+                                    <h3 style="margin: 0 0 0 15px; font-family: 'Nunito', sans-serif;">Precipitation</h3>
+                                    <i class="fas fa-cloud-rain fa-lg" style="margin: 9px 0 0 90px;"></i>
+                                </div>
+                                <p style="position: relative; bottom: 12px;"><b style="font-size: larger;">1.4 cm</b></p>
+                                <div class="level" style="text-align: center;">
+                                    <span class="custom-dot" style="width: 10px; background-color: #e1a897; position: relative; bottom: 5px;"><p style="position: relative; bottom: 35px;">0</p></span>
+                                    <span class="custom-dot-container2" style="display: inline-block; position: relative; right: 7px; bottom: 3px;">
+                                        <span class="custom-dot-left" style="width: 60%; background-color: #e1a897; margin-top: 3px; margin-left: 3px;"></span><p style="position: relative; bottom: 37px; right: 1px;">10</p>
+                                        <span class="custom-dot-right" style="width: 40%; background-color: #E3E4E4; margin-top: 3px; margin-left: 7px;"></span>
+                                    </span>
+                                    <span class="custom-dot" style="width: 10px; background-color: #e1a897; position: relative; bottom: 5px;"><p style="position: relative; bottom: 35px;">20</p></span>
+                                    <span class="custom-dot" style="width: 10px; background-color: #e1a897; position: relative; bottom: 5px;"><p style="position: relative; bottom: 35px;">30</p></span>
+                                    <span class="custom-dot" style="width: 10px; background-color: #e1a897; position: relative; bottom: 5px;"><p style="position: relative; bottom: 35px;">40</p></span>
+                                    <span class="custom-dot" style="width: 10px; background-color: #e1a897; position: relative; bottom: 5px;"><p style="position: relative; bottom: 35px;">50</p></span>
+                                    <span class="custom-dot" style="width: 10px; background-color: #e1a897; position: relative; bottom: 5px;"><p style="position: relative; bottom: 35px;">60</p></span>
+                                    <span class="custom-dot" style="width: 10px; background-color: #e1a897; position: relative; bottom: 5px;"><p style="position: relative; bottom: 35px;">70</p></span>
+                                    <span class="custom-dot" style="width: 10px; background-color: #e1a897; position: relative; bottom: 5px;"><p style="position: relative; bottom: 35px;">80</p></span>
+                                    <span class="custom-dot" style="width: 10px; background-color: #e1a897; position: relative; bottom: 5px;"><p style="position: relative; bottom: 35px;">90</p></span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="row">
+                        <div class="column">
+                            <div class="subCard">
+                                <div style="display: flex;">
+                                    <h3 style="margin: 0 0 0 15px; font-family: 'Nunito', sans-serif;">UV index</h3>
+                                    <span class="material-icons-outlined" style="margin: 9px 0 0 115px; color: #e1a897;">light_mode</span>
+                                </div>
+                                <p style="position: relative; bottom: 20px;"><b style="font-size: larger;">4</b> medium</p>
+                                <div class="level" style="text-align: center; font-size: small;">
+                                    <span class="custom-dot" style="width: 30px; background-color: #e1a897; position: relative; bottom: 12px;"><p style="position: relative; bottom: 32px;">0-2</p></span>
+                                    <span class="custom-dot-container3" style="display: inline-block; position: relative; bottom: 10px; margin-right: 5px;">
+                                        <span class="custom-dot-left" style="width: 50%; background-color: #e1a897;"></span><p style="position: relative; bottom: 33px;">3-5</p>
+                                        <span class="custom-dot-right" style="width: 50%; background-color: #E3E4E4; margin-left: 10px;"></span>
+                                    </span>
+                                    <span class="custom-dot" style="width: 30px; background-color: #e1a897; position: relative; bottom: 12px;"><p style="position: relative; bottom: 32px;">6-7</p></span>
+                                    <span class="custom-dot" style="width: 30px; background-color: #e1a897; position: relative; bottom: 12px;"><p style="position: relative; bottom: 32px;">8-10</p></span>
+                                    <span class="custom-dot" style="width: 30px; background-color: #e1a897; position: relative; bottom: 12px;"><p style="position: relative; bottom: 32px;">11+</p></span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="column">
+                            <div class="subCard">
+                                <div style="display: flex;">
+                                    <h3 style="margin: 0 0 0 15px; font-family: 'Nunito', sans-serif;">Feels like</h3>
+                                    <span class="material-icons-outlined" style="margin: 9px 0 0 115px; color: #e1a897;">thermostat</span>
+                                </div>
+                                <p style="position: relative; bottom: 20px;"><b style="font-size: larger;">30°</b></p>
+                                <span class="custom-dot-container4" style="display: inline-block; position: relative; bottom: 10px; margin-right: 5px;">
+                                    <div class="range" style="display: inline-flex; align-items: baseline; position: relative; bottom: 20px; left: 20px;">
+                                        <p style="margin: 0 25px;">0°</p>
+                                        <p style="margin: 0 25px;">25°</p>
+                                        <p style="margin: 0 25px;">50°</p>
+                                    </div>
+                                    <span class="custom-dot-left" style="width: 70%; background-color: #e1a897; margin-left: 37px;"></span>
+                                    <span class="custom-dot-right" style="width: 30%; background-color: #E3E4E4; margin-left: 125px;"></span>
+                                </span>
+                            </div>
+                        </div>
+                        <div class="column">
+                            <div class="subCard">
+                                <div style="display: flex;">
+                                    <h3 style="margin: 0 0 0 15px; font-family: 'Nunito', sans-serif;">Chance of rain</h3>
+                                    <i class="fab fa-cloudflare" style="margin: 9px 0 0 75px;"></i>
+                                </div>
+                                <p style="position: relative; bottom: 15px;"><b style="font-size: larger;">42%</b></p>
+                                <span class="custom-dot-container4" style="display: inline-block; position: relative; bottom: 5px; margin-right: 5px;">
+                                    <div class="range" style="display: inline-flex; align-items: baseline; position: relative; bottom: 20px; left: 38px; font-size: small;">
+                                        <p style="margin: 0 5px;">0%</p>
+                                        <p style="margin: 0 5px;">25%</p>
+                                        <p style="margin: 0 5px;">50%</p>
+                                        <p style="margin: 0 5px;">75%</p>
+                                        <p style="margin: 0 5px;">100%</p>
+                                    </div>
+                                    <span class="custom-dot-left" style="width: 40%; background-color: #e1a897; margin-left: 45px;"></span>
+                                    <span class="custom-dot-right" style="width: 60%; background-color: #E3E4E4; margin-left: 82px;"></span>
+                                </span>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.9.4/Chart.js"></script>
+    <script>
+
+        const xValues = [23, 29, 58, 75, 33, 20, 73, 49];
+        const yValues = [27, 28, 28, 29, 30, 29, 29, 28];
+
+        const ctx = document.getElementById('myChart').getContext('2d');
+ 
+        const myChart = new Chart(ctx, {
+            type: 'line',
+            data: {
+                labels: xValues, 
+                datasets: [{
+                    data: yValues, 
+                    borderColor: '#e1a897',
+                    borderWidth: 1, 
+                    fill: true, 
+                    backgroundColor: 'rgba(225, 168, 151, 0.5)' 
+                }]
+            },
+            options: {
+                responsive: true,
+                maintainAspectRatio: false,
+                plugins: {
+                    legend: {
+                        display: false,
+                    }
+                },
+                scales: {
+                    x: {
+                        type: 'linear',
+                        position: 'bottom',
+                        ticks: {
+                            display: true, 
+                        },
+                        grid: {
+                            display: true,
+                        },
+                    },
+                    y: {
+                        display: false, 
+                        grid: {
+                            display: false, 
+                        },
+                        ticks: {
+                            display: false, 
+                            color: 'rgba(0, 0, 0, 0)', 
+                        }
+                    }
+                }
+            }
+        });
+
+        const canvas = document.getElementById('myChart');
+        canvas.style.height = '160px';
+    </script>
+</body>
+</html>

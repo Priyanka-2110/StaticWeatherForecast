@@ -1,0 +1,439 @@
+body {
+    background-color: #B5D8FF; 
+    overflow: hidden;
+    margin: 0;
+    position: relative;
+}
+
+.wrapper {
+    display: flex;
+    align-items: flex-start;
+    position: relative; 
+}
+
+.icon {
+    position: absolute;
+    top: 20px;
+    left: 20px;
+    z-index: 2; 
+    font-size: 24px;
+    color: black;
+    border-radius: 30%;
+    background-color: black;
+    padding: 0px 5px 0px;
+    cursor: pointer;
+}
+
+.dots {
+    position: absolute;
+    top: 30px;
+    left: 170px;
+    display: flex;
+    align-items: center;
+    margin-left: 5px; 
+    cursor: pointer;
+}
+
+.custom-dot {
+    display: inline-block; 
+    width: 40px;
+    height: 0.8rem;
+    background-color: black;
+    border-radius: 20px;
+    margin-right: 0.5rem; 
+    color: black;
+    text-align: center;
+    line-height: 0.8rem;
+    position: relative;
+    z-index: 1;
+}
+
+.custom-dot-container {
+    display: inline-block;
+    position: relative;
+    width: 60px;
+    height: 0.8rem;
+}
+
+.custom-dot-container2 {
+    display: inline-block;
+    position: relative;
+    width: 10px;
+    height: 0.8rem;
+}
+
+.custom-dot-container3 {
+    display: inline-block;
+    position: relative;
+    width: 30px;
+    height: 0.8rem;
+}
+
+.custom-dot-container4 {
+    display: inline-block;
+    position: relative;
+    width: 170px;
+    height: 0.8rem;
+}
+
+.dot {
+    width: 0.8rem;
+    height: 0.8rem;
+    background-color: #E4F1FF;
+    border-radius: 50%;
+    margin-right: 0.5rem; 
+}
+
+.custom-dot-left{
+    display: block;
+    height: 100%;
+    position: absolute;
+    border-top-left-radius: 20px;
+    border-bottom-left-radius: 20px;
+    top: 0;
+}
+
+.custom-dot-right {
+    display: block;
+    height: 100%;
+    position: absolute;
+    border-top-right-radius: 20px;
+    border-bottom-right-radius: 20px;
+    top: 0;
+}
+
+.custom-dot-left {
+    left: 0;
+}
+
+.custom-dot-right {
+    left: 18%;
+}
+
+.toggle {
+    position: absolute;
+    top: 30px;
+    left: 330px;
+    color: black;
+    cursor: pointer;
+}
+
+.toggle-value {
+    position: relative;
+    bottom: 22px;
+}
+
+.toggle-switch {
+    position: relative;
+    bottom: 9px;
+}
+
+.section1 {
+    position: absolute;
+    top: 100px;
+    left: 50px;
+    color: black;
+    display: flex;
+    align-items: center;
+    font-size: 16px;
+    font-weight: bold;
+    font-family: 'Nunito', sans-serif;
+}
+
+.section1 i {
+    margin-right: 10px;
+}
+
+.location {
+    margin-right: 120px;
+}
+
+.time {
+    font-weight: bold;
+}
+
+.section2 {
+    position: absolute;
+    top: 130px;
+    left: 50px;
+    color: black;
+    display: flex;
+    align-items: center;
+    font-size: 16px;
+    font-family: 'Nunito', sans-serif;
+}
+
+.section2 i {
+    margin-right: 10px;
+} 
+
+.today {
+    margin-right: 150px;
+}
+
+.section3 {
+    position: absolute;
+    top: 180px;
+    left: 40px;
+    color: black;
+    display: flex;
+    align-items: center;
+    font-size: 16px;
+    font-family: 'Nunito', sans-serif;
+}
+
+.chevron-icon {
+    font-size: 24px;
+    color: black;
+    cursor: pointer;
+}
+
+.section4 {
+    position: absolute;
+    top: 270px;
+    left: 170px;
+    color: orange;
+    display: flex;
+    align-items: center;
+    font-size: 16px;
+    font-family: 'Nunito', sans-serif;
+}
+
+.section4 i {
+    margin-right: 10px;
+} 
+
+.temperature {
+    font-size: 80px;
+    font-weight: bold;
+    color: orange;
+}
+
+.image {
+    height: 102vh;
+    width: auto;
+    max-width: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: -1;
+}
+
+.mainCard {
+    background-color: #FFE8E0;
+    width: 100%;
+    max-width: 1100px;
+    height: 100vh;
+    margin: auto;
+    margin-right: 0;
+    position: relative;
+    border-top-left-radius: 50px;
+    border-bottom-left-radius: 50px;
+    padding: 20px;
+    box-sizing: border-box;
+    z-index: 1;
+}
+
+.card-title {
+    margin-bottom: -10px;
+    font-family: 'Nunito', sans-serif;
+}
+
+.profile {
+    position: absolute;
+    top: 40px;
+    right: 50px;
+    display: flex; 
+    align-items: center; 
+    margin-left: 30px;
+}
+
+.image-with-border {
+    height: 60px; 
+    width: 60px; 
+    border-radius: 50%; 
+    margin-right: 10px;    
+}
+
+.profile img {
+    height: 70%; 
+    width: 70%; 
+    border-radius: 25%;
+}
+
+.graphCard {
+    margin: 15px 20px 0 0; 
+    max-width: 970px; 
+    height: 300px;
+    border-radius: 20px;
+    background-color: #fdfefe;
+}
+
+.graphCard-title {
+    margin: 0 0 0 20px;
+    padding-top: 20px; 
+    font-family: 'Nunito', sans-serif;
+}
+
+.graphCard-buttons {
+    position: absolute;
+    top: 120px;
+    right: 100px;
+    display: flex;
+    gap: 10px; 
+}
+
+.graphCard-button {
+    background-color: #F1F1F1;
+    border: none;
+    padding: 8px 16px;
+    border-radius: 5px;
+    cursor: pointer;
+    height: 20px;
+    display: flex;
+    align-items: center;
+}
+
+.graphCard-button .material-icons-outlined {
+    margin-left: 5px;
+}
+
+.y-axis-hidden .y-axis {
+    display: none;
+}
+
+.y-axis-hidden .y-axis-grid {
+    display: none;
+}
+
+.row {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 10px;
+}
+
+.column {
+    flex: 1;
+    margin-right: 10px;
+}
+
+.subCard {
+    background-color: #f0f0f0;
+    padding: 10px;
+    border-radius: 40px;
+    box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.1);
+    height: 90px;
+    width: 250px;
+    font-family: 'Nunito', sans-serif;
+}
+
+.subCard i {
+    color: #e1a897;
+}
+
+.subCard p {
+    text-align: center;
+}
+
+.progress {
+    position: relative;
+    left: 75px;
+    margin: 4px;
+    float: left;
+    text-align: center;
+}
+  
+.barOverflow {
+    position: relative;
+    overflow: hidden;
+    width: 90px;
+    height: 45px;
+    margin-bottom: -14px;
+}
+  
+.bar {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 90px;
+    height: 90px;
+    border-radius: 50%;
+    box-sizing: border-box;
+    border: 5px solid #E3E4E4;
+    border-bottom-color: #e1a897;
+    border-left-color: #e1a897;
+}  
+
+.y-axis-overlay {
+    position: absolute;
+    top: 240px;
+    left: 69px;
+    width: 40px; 
+    height: 140px;
+    background-color: white; 
+    z-index: 2;
+}
+
+.title-overlay {
+    position: absolute;
+    top: 230px;
+    left: 470px;
+    width: 120px; 
+    height: 20px; 
+    background-color: white; 
+    z-index: 2; 
+}
+
+.time-row {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 10px;
+}
+
+.time-column {
+    flex: 1;
+    margin-right: 15px;
+    text-align: center;
+}
+
+.time-card {
+    padding: 10px;
+    border-radius: 40px;
+    height: 5px;
+    width: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    font-size: xx-small;
+    position: relative;
+    left: 30px;
+    top: 30px;
+}
+
+.time-icon {
+    color: #e1a897;
+    margin-bottom: 5px;
+    font-size: 24px;
+}
+
+.time-label {
+    font-size: larger;
+    font-family: 'Nunito', sans-serif;
+}
+
+.time-card h1 {
+    font-family: 'Nunito', sans-serif;
+}
+
+@media (max-width: 768px) {
+    .mainCard {
+        max-width: 100%;
+        border-radius: 0;
+        right: 0;
+        bottom: 0;
+        margin-right: 0;
+        height: auto;
+    }
+}
